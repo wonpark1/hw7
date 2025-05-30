@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<main class="login-body">
+  {# ← Body(1050×571) #}
+  <section class="login-container">
+    {# ← Frame 30(340×216) #}
+
+    <h2 class="login-title">로그인</h2>
+
+    <form id="loginForm" method="post" action="{% url 'accounts:login' %}">
+      {% csrf_token %}
+      <input
+        id="id_username"
+        name="username"
+        placeholder="아이디를 입력해주세요"
+      />
+      <input
+        id="id_password"
+        name="password"
+        type="password"
+        placeholder="비밀번호를 입력해주세요"
+      />
+
+      <p class="quick-link">
+        <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a>
+      </p>
+
+      <button id="loginBtn" type="submit" disabled>로그인</button>
+    </form>
+
+    <a class="join-btn" href="{% url 'accounts:signup' %}">회원가입</a>
+  </section>
+</main>
+
+<link rel="stylesheet" href="{% static 'css/accounts/login.css' %}" />
+
+<script src="{% static 'js/accounts/login.js' %}"></script>
+
+{% endblock %}

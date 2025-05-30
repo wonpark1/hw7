@@ -1,0 +1,107 @@
+/* login page - CSS */
+
+.login-body {
+  width: 1050px;
+  height: 571px;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login-container {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  font: 700 32px/1 Pretendard, sans-serif;
+  margin: 0 0 32px 0;
+}
+
+#loginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 8px 0;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+#loginForm input {
+  width: 100%;
+  height: 48px;
+  padding: 0 20px;
+  font: 16px Pretendard, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+.quick-link {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000000;
+  text-align: right;
+}
+
+#loginBtn {
+  width: 100%;
+  height: 56px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  font: 16px Pretendard, sans-serif;
+  color: #999;
+  background: #ddd;
+  cursor: pointer;
+}
+
+#loginBtn.active {
+  background: #5e0080;
+}
+
+.join-btn {
+  width: 100%;
+  height: 56px;
+  margin: 8px 20px 0;
+  line-height: 56px;
+  text-align: center;
+  font: 16px Pretendard, sans-serif;
+  color: #5e0080;
+  background: none;
+  border: 1px solid #5e0080;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .login-body {
+    width: auto;
+    height: auto;
+    margin: 32px 16px;
+  }
+  .login-container {
+    width: 100%;
+  }
+}

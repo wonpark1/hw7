@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<main class="signup-body">
+  <section class="signup-container">
+    <h2 class="signup-title">회원가입</h2>
+    <div class="title-line"></div>
+
+    <form id="signupForm" method="post" action="{% url 'accounts:signup' %}">
+      {% csrf_token %}
+
+      <div class="field">
+        <span>아이디</span>
+        <input
+          id="id_username"
+          name="username"
+          placeholder="아이디를 입력해주세요"
+        />
+      </div>
+
+      <div class="field">
+        <span>비밀번호</span>
+        <input
+          id="id_password1"
+          name="password1"
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+        />
+        <ul class="pw-guide">
+          <li>• 비밀번호를 8자 이상으로 작성해주세요.</li>
+          <li>• 영문 대소문자, 숫자, 특수문자를 하나 이상 포함해주세요.</li>
+          <li>• 사용가능 특수문자 @ ! ? - _</li>
+        </ul>
+      </div>
+
+      <div class="field">
+        <span>비밀번호 확인</span>
+        <input
+          id="id_password2"
+          name="password2"
+          type="password"
+          placeholder="비밀번호를 한번 더 입력해주세요"
+        />
+        <p id="pwMatchInfo" class="warn">비밀번호가 일치하지 않습니다!</p>
+      </div>
+
+      <div class="connector-line"></div>
+      <button id="signupBtn" type="submit" disabled>가입하기</button>
+    </form>
+  </section>
+</main>
+
+<link rel="stylesheet" href="{% static 'css/accounts/signup.css' %}" />
+
+<script src="{% static 'js/accounts/signup.js' %}"></script>
+{% endblock %}
