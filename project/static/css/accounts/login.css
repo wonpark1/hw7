@@ -75,6 +75,7 @@
 
 #loginBtn.active {
   background: #5e0080;
+  color: #ddd;
 }
 
 .join-btn {

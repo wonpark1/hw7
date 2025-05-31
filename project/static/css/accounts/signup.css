@@ -96,6 +96,7 @@
 
 #signupBtn.active {
   background: #5e0080;
+  color: #ddd;
 }
 
 @media (max-width: 480px) {
