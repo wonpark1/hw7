@@ -1,7 +1,7 @@
 /* signup page - JS */
 // 활성화 조건 체크 / 비밀번호 패턴 정규식
 const idEl = document.getElementById("id_username");
-const pw1El = document.getElementById("id_password1");
+const pw1El = document.getElementById("id_password");
 const pw2El = document.getElementById("id_password2");
 const btn = document.getElementById("signupBtn");
 const warn = document.getElementById("pwMatchInfo");
